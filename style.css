@@ -1,0 +1,397 @@
+
+  * {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.heroSection{
+    background-image: url("./images/heroimg.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    color: white;
+    background-size: cover;
+    height: 80vh;
+    background-position: center;   
+}
+
+.heroInner{
+  display: grid;
+  place-items: center;
+}
+
+.p{
+  font-size: var(--normal-font-size);
+  font-weight: 300;
+  line-height: 1.5;
+}
+.topics{
+  text-align: center;
+ 
+}
+
+.heroDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(0,0,0,0.6);
+   
+}
+.heroDiv div{
+  flex: 1;
+}
+.services{
+    display: flex;
+    flex-direction: column;
+}
+.serv{
+    display: flex;
+    padding: .3rem;
+    margin-top: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+.serv div{
+    flex-basis: 50%;
+    padding: 2rem;
+}
+
+.logo{
+  width: 5rem;
+  height: 20%;
+  margin: .2rem 0;
+}
+
+.info{
+    display: grid;
+    place-items: center;
+    padding:1.5rem;
+    
+}
+.serv div img{
+    width:100% ;
+}
+.serv:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+/*Navbar*/
+nav{
+    position:sticky;
+    top:0;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 4px 2px -2px gray;
+    padding: .6rem 0;
+}
+
+nav,ul{
+    display: flex;
+    justify-content: space-between;
+    padding: .2rem .4rem;
+}
+ul{
+    flex-basis: 50%;
+}
+li{  
+    margin: .5rem 1rem;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: grey;
+}
+.active a{
+    color: black;
+    border-top: solid black .5px;
+}
+
+
+
+
+/*Signin Page*/
+
+.signInDiv{
+    width: 100vw;
+    height: 60vh;
+}
+
+form{
+    width: 100%;
+    max-width: 28rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    margin: auto;
+    margin-top: 5rem;
+    
+    padding: 1rem;
+    border-radius: 3rem;
+}
+.forgot{
+    margin-bottom: auto;
+    font-size: .8rem;
+}
+label{
+    font-size: 1.2rem;
+}
+input{ width: 100%;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    background-color: gray;
+    border-radius: 0.5rem;
+    outline: none;
+}
+button{
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    border: none;
+}
+.formDiv {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+  }
+.hr{
+  border: none;
+  border-bottom: grey groove .5rem;
+  width: 10%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+
+@media only screen and (max-width: 700px){
+    body {font-size: calc(.6 + ((1vw - 7.68px) * 0.6944));
+     
+   }
+   nav ul{
+     flex-direction: column;
+   }
+     .heroSection{
+         height: 60vh;
+         margin: 2rem 0;
+        
+     }
+     .heroInner img{
+      height: 250px;
+     }
+     .heroInner{
+      background-color:rgba(119, 20, 206, 1);
+      border-radius: .5rem;
+      height: 10px;
+     }
+     .heroDiv{
+      
+     flex-direction: column-reverse;
+     padding: 2rem;
+     }
+
+     
+     
+     .serv, serv:nth-child(even){
+         flex-direction: column-reverse;
+         text-align: center;
+         margin: 1rem 0;
+     }
+     .serv div{
+         padding: 0;
+     }
+     .serv:nth-child(even) div img{
+        border-radius: 2rem;
+         
+     }
+     .form {
+        margin: 1rem;
+        padding: .2rem;
+      }
+    nav ul{
+        display: none;
+    }
+    nav{
+        padding: 0 1rem;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+ 
+ }
+
+
+/*Profile Card Section*/
+ img {
+    max-width: 100%;
+    display: block;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  /* Utilities */
+  .card::after,
+  .card img {
+    border-radius: 50%;
+  }
+  .profileSection{
+    overflow-x: scroll;
+    justify-content: space-between;
+    
+  }
+  .profileSection, .card,
+  .stats {
+    display: flex;
+  }
+  
+  .card {
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before,
+  .card::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+  .card::before {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    top: -.7rem;
+    left: -.7rem;
+  }
+  .card::after {
+    height: 12rem;
+    width: 12rem;
+    background-color: rgb(183, 182, 182);
+    top: -8rem;
+    right: -8rem;
+    box-shadow: 2rem 6rem 0 -3rem #FFF
+  }
+  
+  .card img {
+    width: 8rem;
+    min-width: 80px;
+    box-shadow: 0 0 0 5px #FFF;
+  }
+  
+  .infos {
+    margin-left: 1.5rem;
+  }
+  
+  .name {
+    margin-bottom: 1rem;
+  }
+  .name h2 {
+    font-size: 1.3rem;
+  }
+  .name h4 {
+    font-size: .8rem;
+    color: #333;
+  }
+  
+  .text {
+    font-size: .9rem;
+    margin-bottom: 1rem;
+  }
+  
+  
+  @media screen and (max-width: 700px) {
+    .card {
+      flex-direction: column;
+      width: 40%;
+      padding: .5rem .5rem;
+      align-items: center;
+      text-align: center;
+      
+    }
+    .profileSection{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .infos {
+      margin-left: 0;
+      margin-top: 1.5rem;
+    }
+    footer{
+     
+      flex-direction: column;
+    }
+    
+  }
+  
+  footer ul{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  footer{
+   
+    display: flex;
+    color:silver;
+    background-color: black;
+    padding: 2rem 4rem;
+  }
+  footer div img{
+    width: 30px;
+  }
+
+  footer div{
+    display: grid;
+    place-items: center;
+  }
+
+
+  .about{
+    margin: 0 4rem;
+  }
+  .aboutus{
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+  .aboutSec{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .aboutSub{
+    border: 1px solid rgb(137, 7, 250);
+    box-shadow: rgb(0 0 0 / 25%) 0px 5px 17px;
+    text-align: center;
+    margin:1rem auto;
+    padding: 1rem;
+    flex-basis:25% ;
+  }
+  .aboutSub:nth-child(even){
+    border: 1px solid rgb(250, 157, 7);
+  }
